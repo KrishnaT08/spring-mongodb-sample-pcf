@@ -1,0 +1,14 @@
+# code_snippet springApplicationName start
+spring:
+  application:
+    name: spring-mongodb-sample1
+# code_snippet springApplicationName end
+
+encrypt:
+  keyStore:
+    location: classpath:/server.jks
+    password: letmein
+    alias: mytestkey
+    secret: changeme
+
+

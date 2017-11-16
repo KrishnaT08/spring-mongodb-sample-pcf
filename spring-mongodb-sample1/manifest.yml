@@ -1,0 +1,10 @@
+---
+applications:
+- name: spring-mongodb-sample1
+  memory: 1G
+  random-route: true
+  path: target/spring-mongodb-sample1-0.0.1-SNAPSHOT.jar
+  services:
+      - config-server
+  env:
+      SPRING_PROFILES_ACTIVE: dev

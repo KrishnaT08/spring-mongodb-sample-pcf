@@ -1,0 +1,13 @@
+com\samples\employee\domain\RandomIdGenerator.class
+com\samples\employee\config\MongoProperties.class
+com\samples\employee\config\MongoProperties$MongoNode.class
+com\samples\employee\config\MongoProperties$MongoNodeCredential.class
+com\samples\employee\web\InfoController.class
+com\samples\employee\config\MongoConfig.class
+com\samples\employee\Application.class
+com\samples\employee\web\EmployeeController.class
+com\samples\employee\repositories\AlbumRepositoryPopulator.class
+com\samples\employee\domain\ApplicationInfo.class
+com\samples\employee\domain\Employee.class
+com\samples\employee\repositories\mongodb\MongoEmployeeRepository.class
+com\samples\employee\web\ErrorController.class

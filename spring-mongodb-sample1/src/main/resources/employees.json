@@ -1,0 +1,23 @@
+[
+    {
+        "_class": "com.samples.employee.domain.Employee",
+        "firstName": "testa",
+        "lastName": "testa",
+        "employeeId": "1991",
+        "email": "testa@test.com"
+    },
+    {
+        "_class": "com.samples.employee.domain.Employee",
+        "firstName": "testb",
+        "lastName": "testb",
+        "employeeId": "1992",
+        "email": "testb@test.com"
+    },
+    {
+        "_class": "com.samples.employee.domain.Employee",
+        "firstName": "testc",
+        "lastName": "testc",
+        "employeeId": "1993",
+        "email": "testc@test.com"
+    }
+]
