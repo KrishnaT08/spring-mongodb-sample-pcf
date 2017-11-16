@@ -13,44 +13,44 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.samples.employee.domain.Employee;
+import com.samples.employee.service.EmployeeService;
 
 @RestController
 @RequestMapping(value = "/employees")
 public class EmployeeController {
-    private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
-    private CrudRepository<Employee, String> repository;
+	private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
+	private EmployeeService service;
 
-    @Autowired
-    public EmployeeController(CrudRepository<Employee, String> repository) {
-        this.repository = repository;
-    }
+	@Autowired
+	public EmployeeController(EmployeeService service) {
+		this.service = service;
+	}
 
-    @RequestMapping(method = RequestMethod.GET)
-    public Iterable<Employee> employees() {
-        return repository.findAll();
-    }
+	@RequestMapping(method = RequestMethod.GET)
+	public Iterable<Employee> employees() {
+		return service.employees();
+	}
 
-    @RequestMapping(method = RequestMethod.PUT)
-    public Employee add(@RequestBody @Valid Employee employee) {
-        logger.info("Adding employee " + employee.getId());
-        return repository.save(employee);
-    }
+	@RequestMapping(method = RequestMethod.PUT)
+	public Employee add(@RequestBody @Valid Employee employee) {
 
-    @RequestMapping(method = RequestMethod.POST)
-    public Employee update(@RequestBody @Valid Employee employee) {
-        logger.info("Updating employee " + employee.getId());
-        return repository.save(employee);
-    }
+		return service.add(employee);
+	}
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Employee getById(@PathVariable String id) {
-        logger.info("Getting employee " + id);
-        return repository.findOne(id);
-    }
+	@RequestMapping(method = RequestMethod.POST)
+	public Employee update(@RequestBody @Valid Employee employee) {
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public void deleteById(@PathVariable String id) {
-        logger.info("Deleting employee " + id);
-        repository.delete(id);
-    }
+		return service.update(employee);
+	}
+
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	public Employee getById(@PathVariable String id) {
+
+		return service.getById(id);
+	}
+
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+	public void deleteById(@PathVariable String id) {
+		service.deleteById(id);
+	}
 }

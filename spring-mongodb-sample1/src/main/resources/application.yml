@@ -3,7 +3,10 @@
 spring:
   jpa:
     generate-ddl: true
-
+  cloud:
+    services:
+      registrationMethod: route
+      
 management:
     security:
         enabled: false

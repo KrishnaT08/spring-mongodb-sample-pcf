@@ -1,6 +1,7 @@
 com\samples\employee\domain\RandomIdGenerator.class
 com\samples\employee\config\MongoProperties.class
 com\samples\employee\config\MongoProperties$MongoNode.class
+com\samples\employee\service\EmployeeService.class
 com\samples\employee\config\MongoProperties$MongoNodeCredential.class
 com\samples\employee\web\InfoController.class
 com\samples\employee\config\MongoConfig.class
